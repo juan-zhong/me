@@ -5,181 +5,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Zhong | Academic Portfolio</title>
-    <style>
-        /* Le Labo-inspired Styling */
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f2f2f2;
-            color: #000;
-            margin: 0;
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            line-height: 1.8;
-            text-align: left;
-        }
-
-        header {
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        header h1 {
-            font-size: 3em;
-            letter-spacing: 2px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            color: #555;
-            letter-spacing: 1px;
-            font-weight: 400;
-        }
-
-        nav {
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        nav a {
-            color: #000;
-            text-decoration: none;
-            font-size: 1.2em;
-            margin: 0 20px;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            border-bottom: 2px solid #000;
-        }
-
-        section {
-            background-color: #fff;
-            padding: 40px;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.1em;
-            color: #333;
-            letter-spacing: 0.5px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        .profile-img {
-            display: block;
-            margin: 30px auto;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #000;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #555;
-            border-bottom: 1px solid #555;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            nav a {
-                font-size: 1.1em;
-            }
-
-            h2 {
-                font-size: 1.6em;
-            }
-        }
-    </style>
+    <title>Your Name</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#artwork">Artwork</a>
+        </nav>
+    </header>
 
-<header>
-    <h1>Juan Zhong</h1>
-    <p>Linguist | Educator | Researcher</p>
-</header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm a linguist with a passion for language, art, and education. 
+            Download my <a href="link-to-cv.pdf" target="_blank">CV</a>. 
+            I work under the supervision of <a href="link-to-advisor-profile" target="_blank">Advisor Name</a> at 
+            <a href="link-to-university" target="_blank">University Name</a>.
+        </p>
+    </section>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <section id="research">
+        <h2>Research</h2>
+        <p>Details about your research interests.</p>
+    </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-    <p>I'm Juan Zhong, a second-year PhD student in linguistics at the University at Buffalo. My work focuses on language teaching and education equality, and I am passionate about bridging the gap between theory and practice in language education.</p>
-</section>
+    <section id="teaching">
+        <h2>Teaching</h2>
+        <p>Courses taught, teaching philosophy, etc.</p>
+    </section>
 
-<section id="research">
-    <h2>Research</h2>
-    <p>My research focuses on [Your Research Area], with current projects exploring [brief description]. Here are a few recent publications:</p>
-    <ul>
-        <li><strong>Publication 1:</strong> [Title] – Published in [Journal]</li>
-        <li><strong>Publication 2:</strong> [Title] – Published in [Journal]</li>
-    </ul>
-</section>
+    <section id="artwork">
+        <h2>Artwork</h2>
+        <div class="gallery">
+            <img src="path-to-photo1.jpg" alt="Artwork 1">
+            <img src="path-to-photo2.jpg" alt="Artwork 2">
+        </div>
+    </section>
 
-<section id="teaching">
-    <h2>Teaching</h2>
-    <p>I teach courses in [Your Teaching Area]. My goal is to inspire curiosity and foster inclusivity in every classroom. Here are some of the courses I’ve taught:</p>
-    <ul>
-        <li><strong>Course 1:</strong> [Course Name] – [Brief description]</li>
-        <li><strong>Course 2:</strong> [Course Name] – [Brief description]</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Feel free to reach out at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-</section>
-
-<footer>
-    <p>&copy; 2024 Juan Zhong | All Rights Reserved</p>
-</footer>
-
+    <footer>
+        <p>© 2024 Your Name</p>
+    </footer>
 </body>
 </html>
