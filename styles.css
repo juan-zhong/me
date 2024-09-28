@@ -52,13 +52,22 @@ h1 {
     padding: 100px 20px; /* Section padding */
     max-width: 800px; /* Max width for content */
     margin: 0 auto; /* Center the section */
-    text-align: center; /* Center text */
+    text-align: left; /* Align text to the left */
     border-bottom: 1px solid #e0e0e0; /* Section border */
     background-color: #fff; /* Section background */
 }
 
 h2 {
     font-size: 32px; /* Subheading size */
+    font-weight: normal; /* Regular weight for subheading */
+    letter-spacing: 0.1em; /* Increased letter spacing */
+    color: #000; /* Subheading color */
+    margin-bottom: 40px; /* Space below subheading */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+h3 {
+    font-size: 24px; /* Subheading size */
     font-weight: normal; /* Regular weight for subheading */
     letter-spacing: 0.1em; /* Increased letter spacing */
     color: #000; /* Subheading color */
