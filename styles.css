@@ -6,112 +6,107 @@
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace; /* Using Courier font family */
-    background-color: #fdfdfd;
-    color: #333;
-    line-height: 1.7;
-    letter-spacing: 0.05em;
+    font-family: 'Courier New', Courier, monospace; /* Primary font family */
+    background-color: #fdfdfd; /* Light background color */
+    color: #333; /* Dark text color */
+    line-height: 1.7; /* Improved line height for readability */
+    letter-spacing: 0.05em; /* Slightly increased letter spacing */
 }
 
 header {
-    background-color: #fff;
-    text-align: center;
-    padding: 60px 0;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff; /* Header background */
+    text-align: center; /* Center text */
+    padding: 60px 0; /* Vertical padding */
+    border-bottom: 1px solid #e0e0e0; /* Subtle bottom border */
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 30px;
+    display: inline; /* Inline list items */
+    margin-right: 30px; /* Space between items */
 }
 
 nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 0.1em;
-    font-family: 'Courier New', Courier, monospace; /* Courier font for navigation */
-    text-transform: uppercase;
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link color */
+    font-weight: bold; /* Bold links */
+    font-size: 16px; /* Link font size */
+    letter-spacing: 0.1em; /* Increased letter spacing */
+    text-transform: uppercase; /* Uppercase text */
 }
 
 h1 {
-    font-size: 48px;
-    font-family: 'Courier New', Courier, monospace; /* Courier font for headings */
-    font-weight: normal;
-    letter-spacing: 0.1em;
-    color: #000;
-    margin-top: 20px;
-    text-transform: uppercase;
+    font-size: 48px; /* Main heading size */
+    font-weight: normal; /* Regular weight for the main heading */
+    letter-spacing: 0.1em; /* Increased letter spacing */
+    color: #000; /* Heading color */
+    margin-top: 20px; /* Space above heading */
+    text-transform: uppercase; /* Uppercase text */
 }
 
 .content-section {
-    padding: 100px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    border-bottom: 1px solid #e0e0e0;
-    background-color: #fff;
+    padding: 100px 20px; /* Section padding */
+    max-width: 800px; /* Max width for content */
+    margin: 0 auto; /* Center the section */
+    text-align: center; /* Center text */
+    border-bottom: 1px solid #e0e0e0; /* Section border */
+    background-color: #fff; /* Section background */
 }
 
 h2 {
-    font-size: 32px;
-    font-family: 'Courier New', Courier, monospace; /* Courier font for subheadings */
-    font-weight: normal;
-    letter-spacing: 0.1em;
-    color: #000;
-    margin-bottom: 40px;
-    text-transform: uppercase;
+    font-size: 32px; /* Subheading size */
+    font-weight: normal; /* Regular weight for subheading */
+    letter-spacing: 0.1em; /* Increased letter spacing */
+    color: #000; /* Subheading color */
+    margin-bottom: 40px; /* Space below subheading */
+    text-transform: uppercase; /* Uppercase text */
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #666;
-    font-family: 'Courier New', Courier, monospace; /* Courier font for body text */
-    font-weight: normal;
-    letter-spacing: 0.05em;
+    font-size: 18px; /* Paragraph font size */
+    line-height: 1.8; /* Improved line height for paragraphs */
+    color: #666; /* Light gray text color */
+    font-weight: normal; /* Regular weight for paragraphs */
+    letter-spacing: 0.05em; /* Slightly increased letter spacing */
 }
 
 a {
-    color: #000;
-    text-decoration: underline;
+    color: #000; /* Link color */
+    text-decoration: underline; /* Underline links */
 }
 
 a:hover {
-    color: #888;
-    text-decoration: none;
+    color: #888; /* Darker color on hover */
+    text-decoration: none; /* Remove underline on hover */
 }
 
 .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
+    display: flex; /* Flex layout for gallery */
+    justify-content: center; /* Center gallery items */
+    gap: 20px; /* Space between images */
+    margin-top: 40px; /* Space above gallery */
 }
 
 .gallery img {
-    width: 45%;
-    height: auto;
-    border-radius: 8px;
+    width: 45%; /* Image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
 }
 
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #fff;
-    border-top: 1px solid #e0e0e0;
+    text-align: center; /* Center footer text */
+    padding: 20px 0; /* Footer padding */
+    background-color: #fff; /* Footer background */
+    border-top: 1px solid #e0e0e0; /* Subtle top border */
 }
 
 footer p {
-    font-size: 14px;
-    color: #999;
-    letter-spacing: 0.1em;
-    font-family: 'Courier New', Courier, monospace; /* Courier font for footer text */
-    text-transform: uppercase;
+    font-size: 14px; /* Footer text size */
+    color: #999; /* Light gray text color */
+    letter-spacing: 0.1em; /* Increased letter spacing */
+    text-transform: uppercase; /* Uppercase text */
 }
