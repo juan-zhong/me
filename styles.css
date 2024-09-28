@@ -9,7 +9,7 @@ body {
     font-family: 'Courier New', Courier, monospace; /* Primary font family */
     background-color: #fdfdfd; /* Light background color */
     color: #333; /* Dark text color */
-    line-height: 1.7; /* Improved line height for readability */
+    line-height: 1.8; /* Improved line height for readability */
     letter-spacing: 0.05em; /* Slightly increased letter spacing */
 }
 
@@ -33,65 +33,62 @@ nav ul li {
 nav a {
     text-decoration: none; /* Remove underline */
     color: #333; /* Link color */
-    font-weight: bold; /* Bold links */
+    font-weight: 400; /* Normal weight for links */
     font-size: 16px; /* Link font size */
     letter-spacing: 0.1em; /* Increased letter spacing */
     text-transform: uppercase; /* Uppercase text */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #888; /* Darker color on hover */
 }
 
 h1 {
     font-size: 48px; /* Main heading size */
-    font-weight: normal; /* Regular weight for the main heading */
-    letter-spacing: 0.1em; /* Increased letter spacing */
+    font-weight: 600; /* Semi-bold weight for the main heading */
     color: #000; /* Heading color */
     margin-top: 20px; /* Space above heading */
     text-transform: uppercase; /* Uppercase text */
 }
 
 .content-section {
-    padding: 100px 20px; /* Section padding */
+    padding: 80px 20px; /* Section padding */
     max-width: 800px; /* Max width for content */
     margin: 0 auto; /* Center the section */
-    text-align: center; /* Align text to the left */
+    text-align: left; /* Align text to the left */
     border-bottom: 1px solid #e0e0e0; /* Section border */
     background-color: #fff; /* Section background */
 }
 
 h2 {
     font-size: 32px; /* Subheading size */
-    font-weight: normal; /* Regular weight for subheading */
-    letter-spacing: 0.1em; /* Increased letter spacing */
+    font-weight: 600; /* Semi-bold weight for subheading */
     color: #000; /* Subheading color */
-    margin-bottom: 20px; /* Space below subheading */
+    margin-bottom: 40px; /* Space below subheading */
     text-transform: uppercase; /* Uppercase text */
 }
 
 h3 {
     font-size: 24px; /* Subheading size */
-    font-weight: normal; /* Regular weight for subheading */
-    letter-spacing: 0.1em; /* Increased letter spacing */
+    font-weight: 500; /* Medium weight for subheading */
     color: #000; /* Subheading color */
-    margin-bottom: 10px; /* Space below subheading */
+    margin-bottom: 40px; /* Space below subheading */
     text-transform: uppercase; /* Uppercase text */
 }
 
 p {
-    text-align: left;
     font-size: 18px; /* Paragraph font size */
-    line-height: 1.8; /* Improved line height for paragraphs */
+    line-height: 1.7; /* Improved line height for paragraphs */
     color: #666; /* Light gray text color */
     font-weight: normal; /* Regular weight for paragraphs */
-    letter-spacing: 0.01em; /* Slightly increased letter spacing */
+    letter-spacing: 0.05em; /* Slightly increased letter spacing */
+    text-align: left; /* Ensure paragraph text is aligned to the left */
 }
 
 a {
     color: #000; /* Link color */
-    font-weight: bold; /* Bold links */
-}
-
-a:hover {
-    color: #888; /* Darker color on hover */
-    text-decoration: none; /* Remove underline on hover */
+    text-decoration: underline; /* Underline links */
 }
 
 .gallery {
