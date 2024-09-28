@@ -76,6 +76,7 @@ h3 {
 }
 
 p {
+    text-align: left; /* Center footer text */
     font-size: 18px; /* Paragraph font size */
     line-height: 1.8; /* Improved line height for paragraphs */
     color: #666; /* Light gray text color */
