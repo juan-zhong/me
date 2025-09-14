@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldwork</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+        </nav>
+        <h1>Fieldwork</h1>
+    </header>
+            <section class="content-section">
+     <p> See my fieldwork notes here.
+    </p>
+ </section>
+    <main>
+
+
+        
+        <section class="content-section">
+         
+            <div class="gallery">
+                <img src="seattle.JPG" alt="colors: seattle">
+                 </div>
+
+                        </section>
+
+                <section class="content-section">
+    
+            <div class="gallery">
+                <img src="moonriver.JPG" alt="shades: Anyuan">
+                 </div>
+     
+
+    </main>
+
+    <footer>
+        <p>© 2025 Juan Zhong</p>
+    </footer>
+</body>
+</html>
