@@ -1,116 +1,626 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fieldwork</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fieldwork | Juan Zhong</title>
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --paper: #fbf8f2;
+      --ink: #1f1c17;
+      --muted: #6e675d;
+      --line: #d9d0c1;
+      --accent: #7f6245;
+      --max-width: 1220px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      padding: 1.1rem 0;
+      background: rgba(246, 241, 232, 0.95);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      z-index: 20;
+    }
+
+    .site-header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .site-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav a {
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 1px;
+      background: var(--ink);
+      transition: width 0.25s ease;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      padding: 3rem 0 2.75rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.85fr);
+      gap: 2.2rem;
+      align-items: start;
+    }
+
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5.3rem);
+      line-height: 0.95;
+      margin-bottom: 1rem;
+      max-width: 9ch;
+    }
+
+    .lead {
+      max-width: 60ch;
+      font-size: 1.06rem;
+      color: #2d2a25;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.34);
+      padding: 1.25rem;
+    }
+
+    .meta-row {
+      padding: 0.95rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row:first-child {
+      padding-top: 0;
+    }
+
+    .meta-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .meta-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .meta-value {
+      font-size: 0.98rem;
+    }
+
+    section.content-section {
+      padding: 2.75rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .section-title {
+      font-size: clamp(1.55rem, 3.6vw, 2.4rem);
+      line-height: 1.02;
+    }
+
+    .section-copy p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #2f2b25;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.36);
+      padding: 1rem;
+      min-height: 180px;
+    }
+
+    .card h3 {
+      margin: 0 0 0.6rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    .box {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 1.2rem;
+    }
+
+    .simple-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .simple-list a {
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .simple-list a:hover {
+      border-color: var(--accent);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stack {
+      display: grid;
+      gap: 1rem;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .image-frame {
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #e7dece;
+    }
+
+    .image-frame img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .image-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .caption {
+      margin-top: 0.55rem;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .masonry-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .masonry-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 0.9rem;
+      padding: 0.78rem 1rem;
+      border: 1px solid var(--ink);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: all 0.25s ease;
+    }
+
+    .button-link:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-grid,
+      .gallery-grid,
+      .cards,
+      .masonry-3,
+      .masonry-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(var(--max-width), calc(100% - 1.1rem));
+      }
+
+      .site-header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding-top: 2rem;
+      }
+
+      section.content-section {
+        padding: 2rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Fieldwork</h1>
-    </header> 
- 
-    <section class="content-section"> 
-        <h2>Anyuan Hakka</h2>    
-        <p> Born and raised in <a href="https://en.wikipedia.org/wiki/Anyuan_County" target="_blank">Anyuan</a>, China, I speak Anyuan Hakka, a lesser-studied variety of the Hakka language. Since 2021, I have initiated an ongoing documenttaion project, in which I collaborate with local community members to document, analyze, preserve, and promote Anyuan Hakka. </p>
-        <p> In 2024, I developed an introductory course of general lingusitics and taught it in Anyuan Hakka to a group of community members who have no prior lingusitics background. The course provided easy access to linguistic knowledge for local community memebers who do not speak English (or Mandarin) and equipped them with basic lingusitic tools to better understand Anyuan Hakka, their own everyday language. </p>     
-        <p>  I also run an online Anyuan Hakka chatting group with young generations from Anyuan. The chatting group meets online every week, aiming at creating a vibrant space for people who are from Anyuan but have (im)migrated to other places to continiously speak Anyuan Hakka and maintain their proficiency. 
-    </section>
-   
-    <section class="content-section">    
-        <h3>Anyuan Hakka chatting group 安远话复健
-        </h3>                            
-        <p> Here is our <a href="webcal://p54-caldav.icloud.com/published/2/MTEzODIwMDE0NDExMzgyMMFgVCDCDaKoMtNCKBn1EheKigZyTRdvEtjhZMh7Eqob2s4rlRIdiR-kIIeOP9PGp8uaH3PMuEmiKg6pgtuKLqE" target="_blank">2025 calender</a>.              
-        </p>  
-                <p> Here is our <a href="
-webcal://p54-caldav.icloud.com/published/2/MTEzODIwMDE0NDExMzgyMMFgVCDCDaKoMtNCKBn1EhfA-79njfZBbu5WWxrAYHy4s1xKDF6rgkBgKywDp8NgCctA90rvas5HTKUIKwTFqRs" target="_blank">2026 calender</a>.              
-        </p>  
-        
-    </section>   
-  
-    <section class="content-section">        
-        <h3>Speaking Anyuan Hakka 安远话入门十讲</h3>
-        <p> coming soon </p>  
-    </section>                 
+  <header class="site-header">
+    <div class=
 
-    <section class="content-section">        
-        <h3>Anyuan in flashback 县城 [ɥʊ̃ŋ⁴⁵.t͡sʰɜ̃ŋ³²⁴]
-            </h3>    
-        <div class="gallery">    
-            <img src="琴行旧址.HEIC" alt="shades: 琴行旧址">        
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Fieldwork / Community Documentation</div>
+          <h1>Anyuan Hakka Documentation Project</h1>
+          <p class="lead">
+            An ongoing community-based project centered on Anyuan Hakka, a lesser-studied Hakka variety spoken in Anyuan, Jiangxi, China. Since 2021, the project has brought together language documentation, community collaboration, and public-facing language education.
+          </p>
         </div>
+
+        <aside class="meta-panel" aria-label="Project metadata">
+          <div class="meta-row">
+            <div class="meta-label">Location</div>
+            <div class="meta-value">Anyuan, Jiangxi, China</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Execution</div>
+            <div class="meta-value">2021 – present</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Focus</div>
+            <div class="meta-value">Documentation, language education, community collaboration, diaspora language maintenance</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Project Lead</div>
+            <div class="meta-value">Juan Zhong</div>
+          </div>
+        </aside>
+      </div>
     </section>
-        
-    <section class="content-section">        
-            <h3> farmers market 欣山大市场 [siŋ³⁴.sɑ̃³⁴.tʰɑ⁴⁵.si⁵².tsɑŋ⁴¹]
-            </h3>            
-            <div class="gallery">
-                <img src="欣山大市场03.HEIC" alt="shades: 欣山大市场03">
-                 </div>
-            <div class="gallery">
-                <img src="欣山大市场01.HEIC" alt="shades: 欣山大市场01">
-                 </div>
-            <div class="gallery">
-                <img src="欣山大市场02.HEIC" alt="shades: 欣山大市场02">
-                 </div>       
-            <div class="gallery">
-                <img src="干货.HEIC" alt="shades: 干货">
-                 </div>  
-            <div class="gallery">
-                <img src="母女.HEIC" alt="shades: 母女">
-                 </div>
-            <div class="gallery">
-                <img src="捶捶鱼.HEIC" alt="shades: 捶捶鱼">
-                 </div>     
-            <div class="gallery">
-                <img src="荔枝与.HEIC" alt="shades: 荔枝与">
-                 </div>                      
-            <div class="gallery">
-                <img src="葱子.HEIC" alt="shades: 葱子">
-                 </div>
-        </section>
 
-    <section class="content-section">        
-            <h3> countryside 屋下 [vu⁴⁵.xɑ³⁴]
-            </h3>            
-            <div class="gallery">
-                <img src="柴火.JPG" alt="shades: 柴火">
-                 </div>  
-            <div class="gallery">
-                <img src="篓子.JPG" alt="shades: 篓子">
-                 </div>
-            <div class="gallery">
-                <img src="桌子凳子.JPG" alt="shades: 桌子凳子">
-                 </div>
-            <div class="gallery">
-                <img src="门窗.JPG" alt="shades: 门窗">
-                 </div>          
-        </section>
+    <section id="about" class="content-section">
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Project Vision</div>
+          <h2 class="section-title">Language, memory, and everyday life</h2>
+        </div>
+        <div class="section-copy">
+          <p>
+            Born and raised in Anyuan, I speak Anyuan Hakka, a lesser-studied variety of the Hakka language. This project documents, analyzes, preserves, and promotes Anyuan Hakka through collaboration with local community members and through attention to language as it is lived in everyday settings.
+          </p>
+          <p>
+            The project treats language not as an isolated system, but as something deeply connected to place, migration, local history, foodways, built environments, and intergenerational memory. It also aims to make linguistic knowledge accessible to community members who may not have access to English-language academic resources.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <section class="content-section">      
-            <h3> seasonal produce 瓜果蔬菜
-            </h3> 
-            <div class="gallery">
-                <img src="猪膏花.HEIC" alt="shades: 猪膏花">
-                 </div>
-            <div class="gallery">
-                <img src="瓜田.HEIC" alt="shades: 瓜田">
-                 </div>           
-            <div class="gallery">
-                <img src="鲜鸡蛋.HEIC" alt="shades: 鲜鸡蛋">
-                 </div>             
-        </section>
- 
+    <section id="community" class="content-section">
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Community Work</div>
+          <h2 class="section-title">Speaking Anyuan Hakka together</h2>
+        </div>
+        <div>
+          <div class="cards">
+            <article class="card">
+              <h3>Chatting Group</h3>
+              <p>
+                I run an online Anyuan Hakka chatting group with younger generations from Anyuan. The group meets weekly and creates a space for people living away from home to continue speaking Anyuan Hakka and maintain their proficiency.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Language Course</h3>
+              <p>
+                In 2024, I developed and taught an introductory general linguistics course in Anyuan Hakka for community members without prior linguistics training.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Public Access</h3>
+              <p>
+                The project shares linguistic ideas in accessible forms so that documentation can also serve community learning, reflection, and continued language use.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="content-section">
-        <p> Feel free to email me to discuss more about my work. </p>
-        <p> juanzhon AT buffalo DOT edu </p> 
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Calendar</div>
+          <h2 class="section-title">Anyuan Hakka Chatting Group 安远话复健</h2>
+        </div>
+        <div class="box">
+          <p>Join our ongoing community speaking practice:</p>
+          <ul class="simple-list">
+            <li><a href="https://p54-caldav.icloud.com/published/2/MTQ4ODkwMjg4NTIxNDg4Od8CoLq6CNnSnpXdW0G7iVKqGfwllm7-wWfytNoUHncF3DbMU9X6gKjR6_uGkRsrrkXuWNu6udG8puoeb3LYFX0" target="_blank" rel="noopener noreferrer">2025 calendar</a></li>
+            <li><a href="https://p54-caldav.icloud.com/published/2/MTQ4ODkwMjg4NTIxNDg4Od8CoLq6CNnSnpXdW0G7iVKqGfwllm7-wWfytNoUHncF3DbMU9X6gKjR6_uGkRsrrkXuWNu6udG8puoeb3LYFX0" target="_blank" rel="noopener noreferrer">2026 calendar</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
-    
-</main>
-    <footer>
-        <p>© 2025 Juan Zhong</p>
-    </footer>
+
+    <section class="content-section">
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Course</div>
+          <h2 class="section-title">Speaking Anyuan Hakka 安远话入门十讲</h2>
+        </div>
+        <div class="box">
+          <p>
+            A beginner-friendly introduction to language and linguistics through Anyuan Hakka, designed for community members with no prior formal training.
+          </p>
+          <p><strong>Status:</strong> Coming soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="archive" class="content-section">
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Visual Archive</div>
+          <h2 class="section-title">Anyuan in flashback 县城 [ɥʊ̃ŋ⁴⁵.t͡sʰɜ̃ŋ³²⁴]</h2>
+        </div>
+        <div>
+          <div class="gallery-grid">
+            <figure>
+              <div class="image-frame">
+                <img src="images/qinhang-jiuzhi.jpg" alt="Old music shop site in Anyuan" />
+              </div>
+              <figcaption class="caption">Qinhang old site / 琴行旧址</figcaption>
+            </figure>
+            <div class="stack">
+              <figure>
+                <div class="image-frame">
+                  <img src="images/xinshan-market-01.jpg" alt="Scene from Anyuan farmers market" />
+                </div>
+                <figcaption class="caption">Market life</figcaption>
+              </figure>
+              <figure>
+                <div class="image-frame">
+                  <img src="images/chaihuo.jpg" alt="Countryside daily life in Anyuan" />
+                </div>
+                <figcaption class="caption">Rural everyday life</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Market</div>
+          <h2 class="section-title">Farmers market 欣山大市场 [siŋ³⁴.sɑ̃³⁴.tʰɑ⁴⁵.si⁵².tsɑŋ⁴¹]</h2>
+        </div>
+        <div>
+          <div class="section-copy">
+            <p>
+              A documentation thread focused on market speech, food names, everyday exchange, and the social textures of buying and selling.
+            </p>
+          </div>
+          <div class="masonry-4">
+            <figure>
+              <div class="image-frame"><img src="images/xinshan-market-03.jpg" alt="Anyuan market scene 03" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/xinshan-market-01.jpg" alt="Anyuan market scene 01" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/xinshan-market-02.jpg" alt="Anyuan market scene 02" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/ganhuo.jpg" alt="Dry goods in Anyuan market" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/mu-nv.jpg" alt="Mother and daughter in market" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/chuichuiyu.jpg" alt="Prepared fish dish at market" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/lizhi.jpg" alt="Lychees at market" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/congzi.jpg" alt="Scallions at market" /></div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Countryside</div>
+          <h2 class="section-title">Countryside 屋下 [vu⁴⁵.xɑ³⁴]</h2>
+        </div>
+        <div>
+          <div class="section-copy">
+            <p>
+              Domestic objects, home spaces, rural material culture, and the language of ordinary life in the countryside.
+            </p>
+          </div>
+          <div class="masonry-4">
+            <figure>
+              <div class="image-frame"><img src="images/chaihuo.jpg" alt="Firewood in the countryside" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/louzi.jpg" alt="Basket in the countryside" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/zhuozi-dengzi.jpg" alt="Table and stools" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/menchuang.jpg" alt="Doors and windows" /></div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Seasonality</div>
+          <h2 class="section-title">Seasonal produce 瓜果蔬菜</h2>
+        </div>
+        <div>
+          <div class="section-copy">
+            <p>
+              A record of local produce, ecological rhythms, food vocabulary, and seasonal knowledge embedded in everyday speech.
+            </p>
+          </div>
+          <div class="masonry-3">
+            <figure>
+              <div class="image-frame"><img src="images/zhugaohua.jpg" alt="Seasonal produce in Anyuan" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/guatian.jpg" alt="Melon field in Anyuan" /></div>
+            </figure>
+            <figure>
+              <div class="image-frame"><img src="images/xianjidan.jpg" alt="Fresh eggs in Anyuan" /></div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section">
+      <div class="container section-grid">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h2 class="section-title">Get in touch</h2>
+        </div>
+        <div class="box">
+          <p>
+            Feel free to email me if you would like to discuss the Anyuan Hakka documentation project, collaboration, teaching, or community-based language work.
+          </p>
+          <p><strong>juanzhon@buffalo.edu</strong></p>
+          <a class="button-link" href="mailto:juanzhon@buffalo.edu">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Feel free to email me to discuss more about my work.<br><br>juanzhon AT buffalo DOT edu<br><br>© 2026 Juan Zhong</div>
+  </footer>
 </body>
 </html>
