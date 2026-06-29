@@ -1,370 +1,102 @@
-/* ─── Reset ─────────────────────────────────────────────────── */
-*, *::before, *::after {
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ─── Base ───────────────────────────────────────────────────── */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #fdfdfd;
     color: #333;
     line-height: 1.7;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
 }
 
-/* ─── Nav ────────────────────────────────────────────────────── */
-nav {
+header {
     background-color: #fff;
+    text-align: center;
+    padding: 60px 0;
     border-bottom: 1px solid #e0e0e0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 0 40px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 0;
-    height: 48px;
-    overflow-x: auto;
+    list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
-    display: flex;
-    align-items: center;
+    display: inline;
+    margin-right: 30px;
 }
 
 nav a {
     text-decoration: none;
-    color: #888;
-    font-weight: 500;
-    font-size: 11px;
-    letter-spacing: 0.12em;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     text-transform: uppercase;
-    padding: 0 16px;
-    transition: color 0.15s;
-    white-space: nowrap;
-}
-
-nav a:hover {
-    color: #000;
-}
-
-/* CV button in nav */
-nav a.cv-btn {
-    margin-left: auto;
-    background: #000;
-    color: #fff;
-    padding: 5px 14px;
-    letter-spacing: 0.08em;
-    border-radius: 2px;
-    transition: background 0.15s;
-}
-
-nav a.cv-btn:hover {
-    background: #444;
-    color: #fff;
-}
-
-/* ─── Header ─────────────────────────────────────────────────── */
-header {
-    background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 60px 40px;
-}
-
-.header-inner {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    padding-top: 20px;
-}
-
-.header-text {
-    flex: 1;
-}
-
-p.phonetic {
-    font-style: italic;
-    color: #999;
-    font-size: 15px;
-    letter-spacing: 0.05em;
-    margin-bottom: 6px;
 }
 
 h1 {
     font-size: 48px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: 300;
-    letter-spacing: 0.08em;
-    color: #000;
-    margin-bottom: 8px;
-    line-height: 1.1;
-}
-
-p.chinese {
-    font-size: 15px;
-    color: #999;
-    letter-spacing: 0.2em;
-    margin-bottom: 24px;
-}
-
-.header-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.header-meta span,
-.header-meta a {
-    font-size: 13px;
-    color: #999;
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: color 0.15s;
-}
-
-.header-meta a:hover {
-    color: #000;
-}
-
-/* Photo placeholder */
-.photo-placeholder {
-    width: 150px;
-    height: 188px;
-    flex-shrink: 0;
-    background: linear-gradient(145deg, #e8e4de 0%, #d6cfc7 100%);
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: #aaa;
-    font-size: 11px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
+    color: #000;
+    margin-top: 20px;
 }
 
-.photo-placeholder svg {
-    opacity: 0.35;
-}
-
-/* ─── Sections ───────────────────────────────────────────────── */
 .content-section {
-    padding: 72px 20px;
+    padding: 100px 20px;
     max-width: 800px;
     margin: 0 auto;
+    text-align: left;
     border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
 }
 
 h2 {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    color: #888;
-    text-transform: uppercase;
-    margin-bottom: 48px;
-}
-
-/* ─── Research ───────────────────────────────────────────────── */
-.research-item {
-    margin-bottom: 48px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid #ebebeb;
-}
-
-.research-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.research-header {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.research-item h3 {
-    font-size: 20px;
+    font-size: 32px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: 300;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.1em;
     color: #000;
-    margin-bottom: 0;
-}
-
-.status {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 2px 8px;
-    border-radius: 2px;
-    background: #f0ede8;
-    color: #888;
-    flex-shrink: 0;
-}
-
-.research-item p {
-    font-size: 16px;
-    color: #555;
-    font-weight: 300;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
-    margin-bottom: 16px;
-}
-
-.research-item p:last-child {
-    margin-bottom: 0;
-}
-
-/* Publication entries */
-p.pub-entry {
-    font-size: 14px !important;
-    color: #888 !important;
-    padding-left: 14px;
-    border-left: 2px solid #e0e0e0;
-    line-height: 1.7 !important;
-    margin-bottom: 12px !important;
-}
-
-p.pub-entry a {
-    color: #555;
-    font-size: 13px;
-    margin-left: 4px;
-}
-
-p.pub-entry a:hover {
-    color: #000;
-    text-decoration: underline;
-}
-
-/* ─── Teaching ───────────────────────────────────────────────── */
-.teaching-group {
     margin-bottom: 40px;
-}
-
-.teaching-group:last-child {
-    margin-bottom: 0;
-}
-
-.teaching-group h3 {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    color: #aaa;
     text-transform: uppercase;
-    margin-bottom: 16px;
 }
 
-.teaching-item {
-    padding: 12px 0;
-    border-bottom: 1px solid #ebebeb;
-}
-
-.teaching-item:first-of-type {
-    border-top: 1px solid #ebebeb;
-}
-
-.teaching-item .course {
-    font-size: 16px;
+h3 {
+    font-size: 18px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: 300;
-    color: #222;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 20px;
 }
 
-.teaching-item .detail {
-    font-size: 13px;
-    color: #aaa;
-    margin-top: 2px;
-    letter-spacing: 0.02em;
-}
-
-/* ─── Service ────────────────────────────────────────────────── */
-.service-list {
-    list-style: none;
-}
-
-.service-list li {
-    display: flex;
-    gap: 24px;
-    align-items: baseline;
-    padding: 12px 0;
-    border-bottom: 1px solid #ebebeb;
-    font-size: 15px;
-    color: #555;
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: 300;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
+        margin-bottom: 40px;
 }
 
-.service-list li:first-child {
-    border-top: 1px solid #ebebeb;
-}
-
-.service-list .year {
-    font-size: 12px;
-    color: #aaa;
-    min-width: 56px;
-    flex-shrink: 0;
-    letter-spacing: 0.04em;
-}
-
-.service-list a {
-    color: #555;
-    text-decoration: none;
-}
-
-.service-list a:hover {
-    color: #000;
-    text-decoration: underline;
-}
-
-/* ─── Links (global) ─────────────────────────────────────────── */
 a {
     color: #000;
     text-decoration: none;
-    transition: color 0.15s;
 }
 
 a:hover {
-    color: #666;
+    color: #888;
+    text-decoration: none;
 }
 
-/* ─── Footer ─────────────────────────────────────────────────── */
-footer {
-    text-align: center;
-    padding: 24px 20px;
-    background-color: #fff;
-    border-top: 1px solid #e0e0e0;
-}
-
-footer p {
-    font-size: 12px;
-    color: #bbb;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0;
-}
-
-footer a {
-    color: #999;
-}
-
-footer a:hover {
-    color: #000;
-}
-
-/* ─── Gallery (unchanged) ────────────────────────────────────── */
 .gallery {
     display: flex;
     justify-content: center;
@@ -378,32 +110,17 @@ footer a:hover {
     border-radius: 8px;
 }
 
-/* ─── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 600px) {
-    header {
-        padding: 40px 20px;
-    }
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+}
 
-    .header-inner {
-        flex-direction: column-reverse;
-        gap: 24px;
-    }
-
-    .photo-placeholder {
-        width: 100px;
-        height: 125px;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    nav {
-        padding: 0 16px;
-    }
-
-    nav a {
-        padding: 0 10px;
-        font-size: 10px;
-    }
+footer p {
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 0.1em;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-transform: uppercase;
 }
