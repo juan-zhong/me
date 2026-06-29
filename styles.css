@@ -108,6 +108,12 @@ p.pub-entry a:hover {
     text-decoration: underline;
 }
 
+.teaching-item .detail {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 2px;
+    letter-spacing: 0.02em;
+}
 
 a {
     color: #000;
