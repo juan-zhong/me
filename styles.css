@@ -87,6 +87,28 @@ p {
         margin-bottom: 40px;
 }
 
+/* Publication entries */
+p.pub-entry {
+    font-size: 14px !important;
+    color: #888 !important;
+    padding-left: 14px;
+    border-left: 2px solid #e0e0e0;
+    line-height: 1.7 !important;
+    margin-bottom: 12px !important;
+}
+
+p.pub-entry a {
+    color: #555;
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+p.pub-entry a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+
 a {
     color: #000;
     text-decoration: none;
