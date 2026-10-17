@@ -152,3 +152,15 @@ footer p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     text-transform: uppercase;
 }
+
+
+/* Tagline under name */
+.tagline {
+    margin: 16px auto 24px;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+    color: #555;
+}
