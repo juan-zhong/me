@@ -1,118 +1,187 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fieldwork</title>
+    <title>Anyuan Hakka Documentation Project (AYHAK)</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific styles, kept here so only this file needs replacing */
+        .skip { position: absolute; left: -9999px; }
+        .skip:focus { left: 16px; top: 16px; background: #fff; padding: 8px 12px; z-index: 10; }
+        .page-nav { text-align: center; padding: 18px 16px 0; }
+        .page-nav a { margin: 0 12px; }
+        .hero { text-align: center; padding: 56px 20px 48px; border-bottom: 1px solid #e0e0e0; background: #fff; }
+        .hero .kicker { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #888; margin-bottom: 14px; }
+        .hero h1 { margin-top: 0; }
+        .hero .subtitle { font-size: 20px; font-weight: 300; color: #555; margin: 12px auto 24px; max-width: 640px; }
+        .hero .intro { max-width: 640px; margin: 0 auto 28px; text-align: left; }
+        .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 28px; }
+        .btn { display: inline-block; padding: 10px 20px; border: 1px solid #333; border-radius: 2px; color: #333; text-decoration: none; font-size: 14px; letter-spacing: 0.08em; }
+        .btn.primary { background: #333; color: #fff; }
+        .btn:hover { opacity: 0.8; }
+        .status { font-size: 13px; color: #777; letter-spacing: 0.06em; }
+        .status span + span::before { content: " · "; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; margin-top: 24px; }
+        .card { border: 1px solid #e0e0e0; border-radius: 4px; padding: 20px; background: #fff; }
+        .card h3 { margin-bottom: 6px; color: #333; }
+        .card .zh { color: #888; font-size: 15px; margin-bottom: 10px; }
+        .card .tag { display: inline-block; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #666; border: 1px solid #ccc; border-radius: 2px; padding: 2px 8px; margin-bottom: 10px; }
+        .card p { margin-bottom: 8px; }
+        .content-section ul { margin: 12px 0 12px 22px; }
+        .content-section li { margin-bottom: 6px; }
+        .faq dt { font-weight: 600; margin-top: 22px; color: #333; }
+        .faq dd { margin: 6px 0 0 0; }
+        .ipa { color: #888; font-size: 15px; }
+        .page-nav ul, .page-nav { line-height: 2.2; }
+        @media (max-width: 640px) {
+            .page-nav a { margin: 0 8px; font-size: 13px; }
+            .hero { padding: 36px 16px 32px; }
+            .hero h1 { font-size: 30px; letter-spacing: 0.04em; }
+            .hero .subtitle { font-size: 17px; }
+            .content-section { padding: 56px 16px; }
+            .gallery img { width: 100%; }
+            h2 { font-size: 24px; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Fieldwork</h1>
-    </header> 
- 
-    <section class="content-section"> 
-        <h2>Anyuan Hakka</h2>    
-        <p> Born and raised in <a href="https://en.wikipedia.org/wiki/Anyuan_County" target="_blank">Anyuan</a>, China, I speak Anyuan Hakka, a lesser-studied variety of the Hakka language. Since 2021, I have initiated an ongoing documentation project, in which I collaborate with local community members to document, analyze, preserve, and promote Anyuan Hakka. </p>
-        <p> In 2024, I developed an introductory course of general linguistics and taught it in Anyuan Hakka to a group of community members who have no prior linguistics background. The course provided easy access to linguistic knowledge for local community members who do not speak English (or Mandarin) and equipped them with basic linguistic tools to better understand Anyuan Hakka, their own everyday language. </p>     
-        <p>  I also run an online Anyuan Hakka chatting group with young generations from Anyuan. The chatting group meets online every week, aiming at creating a vibrant space for people who are from Anyuan but have (im)migrated to other places to continuously speak Anyuan Hakka and maintain their proficiency. 
-    </section>
-   
-    <section class="content-section">    
-        <h3>Anyuan Hakka chatting group 安远话复健
-        </h3>                            
-        <p> Here is our <a href="webcal://p54-caldav.icloud.com/published/2/MTEzODIwMDE0NDExMzgyMMFgVCDCDaKoMtNCKBn1EheKigZyTRdvEtjhZMh7Eqob2s4rlRIdiR-kIIeOP9PGp8uaH3PMuEmiKg6pgtuKLqE" target="_blank">2025 calender</a>.              
-        </p>  
-                <p> Here is our <a href="
-webcal://p54-caldav.icloud.com/published/2/MTEzODIwMDE0NDExMzgyMMFgVCDCDaKoMtNCKBn1EhfA-79njfZBbu5WWxrAYHy4s1xKDF6rgkBgKywDp8NgCctA90rvas5HTKUIKwTFqRs" target="_blank">2026 calender</a>.              
-        </p>  
-        
-    </section>   
-  
-    <section class="content-section">        
-        <h3>Speaking Anyuan Hakka 安远话入门十讲</h3>
-        <p> An introductory course on the linguistics of Anyuan Hakka, taught in Mandarin for speakers and non-speakers alike. Coming soon.</p>
+    <a class="skip" href="#main">Skip to content</a>
 
-        <h3>Edible plants of Anyuan 安远话植物图集</h3>
-        <p> A photo book of edible plants with their Anyuan Hakka names, IPA transcriptions, and audio recordings, in a web edition and a print edition with QR codes linking to the audio. <!-- TODO: add link to web edition --> Coming soon.</p>  
-    </section>                 
+    <nav class="page-nav">
+        <a href="index.html">← Juan Zhong</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#join">Join</a>
+        <a href="#questions">Questions</a>
+        <a href="#gallery">Anyuan in images</a>
+    </nav>
 
-    <section class="content-section">        
-        <h3>Anyuan in flashback 县城 [ɥʊ̃ŋ⁴⁵.t͡sʰɜ̃ŋ³²⁴]
-            </h3>    
-        <div class="gallery">    
-            <img src="琴行旧址.HEIC" alt="shades: 琴行旧址">        
+    <header class="hero">
+        <p class="kicker">AYHAK · 安远话记录计划</p>
+        <h1>Anyuan Hakka Documentation Project</h1>
+        <p class="subtitle">Documenting, studying, and keeping alive the Hakka spoken in Anyuan County, Jiangxi, together with its speakers</p>
+        <p class="intro">Anyuan Hakka (安远话) is a lesser-studied variety of Hakka spoken in <a href="https://en.wikipedia.org/wiki/Anyuan_County" target="_blank">Anyuan County</a>, southern Jiangxi. As more young people move away and grow up speaking Mandarin, everyday use of the language is shrinking. AYHAK is a community-based project, led by a native speaker, that records the language, analyzes it, and turns what we learn into resources the community can use.</p>
+        <div class="buttons">
+            <a class="btn primary" href="#projects">Explore the projects</a>
+            <a class="btn" href="#join">Join a meetup</a>
+            <a class="btn" href="mailto:juanzhon@buffalo.edu">Get in touch</a>
         </div>
-    </section>
-        
-    <section class="content-section">        
-            <h3> farmers market 欣山大市场 [siŋ³⁴.sɑ̃³⁴.tʰɑ⁴⁵.si⁵².tsɑŋ⁴¹]
-            </h3>            
-            <div class="gallery">
-                <img src="欣山大市场03.HEIC" alt="shades: 欣山大市场03">
-                 </div>
-            <div class="gallery">
-                <img src="欣山大市场01.HEIC" alt="shades: 欣山大市场01">
-                 </div>
-            <div class="gallery">
-                <img src="欣山大市场02.HEIC" alt="shades: 欣山大市场02">
-                 </div>       
-            <div class="gallery">
-                <img src="干货.HEIC" alt="shades: 干货">
-                 </div>  
-            <div class="gallery">
-                <img src="母女.HEIC" alt="shades: 母女">
-                 </div>
-            <div class="gallery">
-                <img src="捶捶鱼.HEIC" alt="shades: 捶捶鱼">
-                 </div>     
-            <div class="gallery">
-                <img src="荔枝与.HEIC" alt="shades: 荔枝与">
-                 </div>                      
-            <div class="gallery">
-                <img src="葱子.HEIC" alt="shades: 葱子">
-                 </div>
+        <p class="status"><span>Since 2021</span><span>Community-based</span><span>Native-speaker led</span><span>Anyuan County, Jiangxi</span></p>
+    </header>
+
+    <main id="main">
+
+        <section id="about" class="content-section">
+            <h2>Why AYHAK</h2>
+            <p> Hakka is often described through a few well-studied varieties, while the speech of individual counties like Anyuan remains largely undocumented. Anyuan Hakka also differs from town to town and village to village. AYHAK aims to:</p>
+            <ul>
+                <li>describe the sound system and grammar of Anyuan Hakka;</li>
+                <li>record vocabulary tied to local life, such as plants, food, farming, and the market;</li>
+                <li>give speakers, at home and away, ways to keep using the language and to learn about it.</li>
+            </ul>
         </section>
 
-    <section class="content-section">        
-            <h3> countryside 屋下 [vu⁴⁵.xɑ³⁴]
-            </h3>            
-            <div class="gallery">
-                <img src="柴火.JPG" alt="shades: 柴火">
-                 </div>  
-            <div class="gallery">
-                <img src="篓子.JPG" alt="shades: 篓子">
-                 </div>
-            <div class="gallery">
-                <img src="桌子凳子.JPG" alt="shades: 桌子凳子">
-                 </div>
-            <div class="gallery">
-                <img src="门窗.JPG" alt="shades: 门窗">
-                 </div>          
+        <section class="content-section">
+            <h2>How we work</h2>
+            <ul>
+                <li><strong>With speakers, not just about them.</strong> Community members take part as collaborators, consultants, and learners.</li>
+                <li><strong>There is no single "standard" Anyuan Hakka.</strong> We record variation across towns and villages instead of choosing one form as correct.</li>
+                <li><strong>Results go back to the community.</strong> Courses, meetups, and the photo book are made for Anyuan people first, and in their own language where possible.</li>
+                <li><strong>Consent comes first.</strong> Recordings and personal information are shared only with speakers' permission.</li>
+            </ul>
         </section>
 
-    <section class="content-section">      
-            <h3> seasonal produce 瓜果蔬菜
-            </h3> 
-            <div class="gallery">
-                <img src="猪膏花.HEIC" alt="shades: 猪膏花">
-                 </div>
-            <div class="gallery">
-                <img src="瓜田.HEIC" alt="shades: 瓜田">
-                 </div>           
-            <div class="gallery">
-                <img src="鲜鸡蛋.HEIC" alt="shades: 鲜鸡蛋">
-                 </div>             
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <span class="tag">In preparation</span>
+                    <h3>IPA Illustration</h3>
+                    <p class="zh">安远话语音描写</p>
+                    <p>A phonetic description of Anyuan Hakka in the format of the <em>Illustrations of the IPA</em>, with recordings.</p>
+                    <p class="pub-entry">Zhong, Juan, T. Yang &amp; Matthew Faytak. In preparation. Anyuan Hakka: An IPA illustration.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">Forthcoming</span>
+                    <h3>Edible Plants of Anyuan</h3>
+                    <p class="zh">安远话植物图集</p>
+                    <p>A photo book of edible plants with their Anyuan Hakka names, IPA transcriptions, and audio, in a web edition and a print edition with QR codes linking to the recordings.</p>
+                    <!-- TODO: add link to web edition -->
+                </div>
+                <div class="card">
+                    <span class="tag">2024</span>
+                    <h3>Linguistics in Anyuan Hakka</h3>
+                    <p class="zh">用安远话讲语言学</p>
+                    <p>An introductory course in general linguistics, taught in Anyuan Hakka to community members with no prior training, so they can explore their own everyday language.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">Coming soon</span>
+                    <h3>Speaking Anyuan Hakka</h3>
+                    <p class="zh">安远话入门十讲</p>
+                    <p>An online introduction to the linguistics of Anyuan Hakka, taught in Mandarin, for speakers and non-speakers alike.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top:48px;">Presentations</h3>
+            <p class="pub-entry">Zhong, Juan. 2026. Anyuan Hakka documentation project. Paper presented at <em>4to Coloquio Internacional de Lingüística en Bolivia</em> [Presentation in Anyuan Hakka], 20–21 March 2026, La Paz, Bolivia. <a href="CILB4 Zhong abstract.pdf" target="_blank">[abstract]</a></p>
         </section>
- 
-    <section class="content-section">
-        <p> Feel free to email me to discuss more about my work. </p>
-        <p> juanzhon AT buffalo DOT edu </p> 
-    </section>
-    
-</main>
+
+        <section id="join" class="content-section">
+            <h2>Join a meetup 安远话复健会</h2>
+            <p> Our online meetups are a place for people from Anyuan, wherever they live now, to keep speaking Anyuan Hakka. We meet every other Friday evening (Beijing time) on Tencent Meeting: half free conversation, half a chosen topic. Participants add their town or village to their display name, so everyone can hear how the language varies.</p>
+            <p> Add the schedule to your calendar: <a href="webcal://p54-caldav.icloud.com/published/2/MTEzODIwMDE0NDExMzgyMMFgVCDCDaKoMtNCKBn1EhfA-79njfZBbu5WWxrAYHy4s1xKDF6rgkBgKywDp8NgCctA90rvas5HTKUIKwTFqRs" target="_blank">2026 calendar</a> · <a href="webcal://p54-caldav.icloud.com/published/2/MTEzODIwMDE0NDExMzgyMMFgVCDCDaKoMtNCKBn1EheKigZyTRdvEtjhZMh7Eqob2s4rlRIdiR-kIIeOP9PGp8uaH3PMuEmiKg6pgtuKLqE" target="_blank">2025 calendar</a></p>
+            <p> To join, <a href="mailto:juanzhon@buffalo.edu">email me</a> for the meeting link.</p>
+        </section>
+
+        <section id="questions" class="content-section">
+            <h2>Questions</h2>
+            <dl class="faq">
+                <dt>Is Anyuan Hakka a language or a dialect?</dt>
+                <dd>It is commonly called a dialect (方言) in China. Linguistically, it is a variety of Hakka with its own sounds, words, and grammar, and it deserves documentation in its own right.</dd>
+                <dt>I'm from Anyuan. How can I take part?</dt>
+                <dd>Join a meetup, share words or stories from your town or village, or help with recordings. Any level of fluency is welcome.</dd>
+                <dt>I don't speak Anyuan Hakka. Can I still join the course or meetups?</dt>
+                <dd>Yes. The upcoming course is taught in Mandarin and open to non-speakers, and listeners are welcome at the meetups.</dd>
+                <dt>I'm a researcher. Can I use the data?</dt>
+                <dd>Recordings are shared only with speakers' consent. Please <a href="mailto:juanzhon@buffalo.edu">get in touch</a> to discuss collaboration or access.</dd>
+            </dl>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2>Anyuan in images</h2>
+            <p> Photographs from fieldwork in Anyuan, captioned in Anyuan Hakka.</p>
+
+            <h3>Anyuan in flashback 县城 <span class="ipa">[ɥʊ̃ŋ⁴⁵.t͡sʰɜ̃ŋ³²⁴]</span></h3>
+            <div class="gallery"><img src="琴行旧址.HEIC" alt="琴行旧址, the old music shop site"></div>
+
+            <h3 style="margin-top:48px;">Farmers market 欣山大市场 <span class="ipa">[siŋ³⁴.sɑ̃³⁴.tʰɑ⁴⁵.si⁵².tsɑŋ⁴¹]</span></h3>
+            <div class="gallery"><img src="欣山大市场03.HEIC" alt="欣山大市场"></div>
+            <div class="gallery"><img src="欣山大市场01.HEIC" alt="欣山大市场"></div>
+            <div class="gallery"><img src="欣山大市场02.HEIC" alt="欣山大市场"></div>
+            <div class="gallery"><img src="干货.HEIC" alt="干货, dried goods"></div>
+            <div class="gallery"><img src="母女.HEIC" alt="母女, mother and daughter"></div>
+            <div class="gallery"><img src="捶捶鱼.HEIC" alt="捶捶鱼"></div>
+            <div class="gallery"><img src="荔枝与.HEIC" alt="荔枝"></div>
+            <div class="gallery"><img src="葱子.HEIC" alt="葱子, scallions"></div>
+
+            <h3 style="margin-top:48px;">Countryside 屋下 <span class="ipa">[vu⁴⁵.xɑ³⁴]</span></h3>
+            <div class="gallery"><img src="柴火.JPG" alt="柴火, firewood"></div>
+            <div class="gallery"><img src="篓子.JPG" alt="篓子, baskets"></div>
+            <div class="gallery"><img src="桌子凳子.JPG" alt="桌子凳子, table and stools"></div>
+            <div class="gallery"><img src="门窗.JPG" alt="门窗, doors and windows"></div>
+
+            <h3 style="margin-top:48px;">Seasonal produce 瓜果蔬菜</h3>
+            <div class="gallery"><img src="猪膏花.HEIC" alt="猪膏花"></div>
+            <div class="gallery"><img src="瓜田.HEIC" alt="瓜田, melon field"></div>
+            <div class="gallery"><img src="鲜鸡蛋.HEIC" alt="鲜鸡蛋, fresh eggs"></div>
+        </section>
+
+    </main>
+
     <footer>
+        <p>Anyuan Hakka Documentation Project (AYHAK) · Led by <a href="index.html">Juan Zhong</a>, University at Buffalo · Advised by Matthew Faytak</p>
+        <p>Supported by the UB Linguistics Graduate Research Fund · Contact: juanzhon AT buffalo DOT edu</p>
         <p>© 2026 Juan Zhong</p>
     </footer>
 </body>
