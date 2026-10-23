@@ -16,7 +16,7 @@ The site includes:
 Related sites:
 
 - [AYHAK · Anyuan Hakka Documentation Project](https://juan-zhong.github.io/ay_hak/)
-- [Teaching & Learning](https://juan-zhong.github.io/teaching/): teaching materials and learning resources
+- [Teaching & Learning](https://juan-zhong.github.io/teachtolearn/): teaching materials and learning resources
 
 Contact: juanzhon AT buffalo DOT edu
 
