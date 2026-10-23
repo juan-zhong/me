@@ -4,10 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community</title>
+    <title>Community · Juan Zhong</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-nav { text-align: center; padding: 18px 16px 0; line-height: 2.2; }
+        .page-nav a { margin: 0 10px; }
+        html { scroll-behavior: smooth; }
+        .to-top { position: fixed; right: 24px; bottom: 24px; width: 40px; height: 40px; border: 1px solid #ccc; border-radius: 50%; background: #fff; color: #777; font-size: 18px; line-height: 38px; text-align: center; text-decoration: none; opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s, color .2s, border-color .2s; z-index: 100; }
+        .to-top.show { opacity: 1; visibility: visible; }
+        .to-top:hover { color: #000; border-color: #000; }
+    </style>
 </head>
 <body>
+
+    <nav class="page-nav">
+        <a href="index.html">← Juan Zhong</a>
+        <a href="#ayhak">AYHAK</a>
+        <a href="#actt">ACTT</a>
+        <a href="#cthh">CTHH</a>
+    </nav>
    
     <header>
         <h1>Community</h1>
@@ -20,7 +35,7 @@
       <section id="ayhak" class="content-section">
         <h2>AYHAK</h2>
           <h3>Anyuan Hakka Documentation Project</h3>
-          <p> A community project for my hometown language: biweekly online meetups where people from Anyuan keep speaking Anyuan Hakka, an edible-plant photo book with local names and audio (in development), and introductory linguistics courses taught in Anyuan Hakka, with a Anyuan Hakka course taught in Mandarin coming soon.</p>
+          <p> A community project for my hometown language: biweekly online meetups where people from Anyuan keep speaking Anyuan Hakka, an edible-plant photo book with local names and audio (in development), and introductory linguistics courses taught in Anyuan Hakka, with an Anyuan Hakka course taught in Mandarin coming soon.</p>
           <p> Visit the <a href="https://juan-zhong.github.io/ay_hak/">AYHAK website</a>.</p>
       </section>
 
@@ -43,7 +58,7 @@
           <p> In OHOH, members from the CTHH plan freely join in the weekly online chatting room hosted by regular mentors and have conversations about their questions and interests in an informal, supportive environment. </p>
           <p> As of 2026, we have completed 13 rounds of CTHH (2020–2026) and four rounds of OHOH (2022–2026). Additionally, we organized three special annual gatherings (2022, 2023, and 2026) featuring thematic discussions and invited guest talks that strengthened community engagement.</p> 
           
-          <p> check out our social media platform WeChat official account; SpringFlowerField</p>
+          <p> Check out our WeChat official account: SpringFlowerField.</p>
       </section>
 
         
@@ -51,6 +66,15 @@
 
     </main>
 
+    <a href="#" class="to-top" id="toTop" aria-label="Back to top" title="Back to top">↑</a>
+    <script>
+        (function () {
+            var b = document.getElementById('toTop');
+            function f() { b.classList.toggle('show', window.scrollY > 600); }
+            window.addEventListener('scroll', f, { passive: true }); f();
+            b.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        })();
+    </script>
     <footer>
         <p>© 2026 Juan Zhong</p>
     </footer>

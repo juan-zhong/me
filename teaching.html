@@ -13,6 +13,10 @@
         main h4 { font-size: 17px; font-weight: 400; color: #333; letter-spacing: 0.05em; margin: 32px 0 6px; }
         .meta { font-size: 14px; color: #888; margin-top: -4px; }
         .note { font-size: 15px; color: #777; }
+        html { scroll-behavior: smooth; }
+        .to-top { position: fixed; right: 24px; bottom: 24px; width: 40px; height: 40px; border: 1px solid #ccc; border-radius: 50%; background: #fff; color: #777; font-size: 18px; line-height: 38px; text-align: center; text-decoration: none; opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s, color .2s, border-color .2s; z-index: 100; }
+        .to-top.show { opacity: 1; visibility: visible; }
+        .to-top:hover { color: #000; border-color: #000; }
     </style>
 </head>
 <body>
@@ -99,7 +103,7 @@
 
             <h4>Children of Migrant Workers in Beijing</h4>
             <p> As a research and teaching volunteer with Vibrant Future (formerly Vibrant Communities), 2017–2018, I worked on after-school language learning programs for domestic migrant workers' children in China.</p>
-                <p class="pub-entry">Zhong, Juan. 2019. A task-based program for teaching English to children of migrant workers in Beijing. <em>8th International Conference on Task-Based Language Teaching</em>, Ottawa, Canada.</p>
+                <p class="pub-entry">Zhong, Juan. 2019. A task-based program for teaching English to children of migrant workers in Beijing. Paper presented at <em>The 8th International Conference on Task-Based Language Teaching</em>, 19–21 August 2019, Ottawa, Canada.</p>
         </section>
 
         <section id="further" class="content-section">
@@ -127,12 +131,21 @@
             <p> I have taught linguistics at the University at Buffalo, including as instructor of record for Language, Society, and the Individual and Introduction to Linguistic Analysis, and Chinese at Columbia University and Beijing Foreign Studies University. See the <a href="index.html#teaching">full list of courses</a> and my <a href="/me/cv_juanzhong.pdf" target="_blank">CV</a>.</p>
 
             <h3 style="margin-top:48px;">Research on Pedagogy</h3>
-                <p class="pub-entry">Zhong, Juan. 2019. Chinese demonstrative <em>gāi</em>: A linguistic investigation and its pedagogical implications. <em>IFOLCE-5</em>, New York. <a href="/me/IFOLCE5 Zhong abstract.pdf" target="_blank">Abstract</a></p>
-                <p class="pub-entry">Hu, Lingjun &amp; Juan Zhong. 2019. Discovering the strategies for written corrective feedback in Chinese language teaching: Insights from 3rd year CIB program. <em>CLTA Annual Conference</em>, Seattle.</p>
+                <p class="pub-entry">Zhong, Juan. 2019. Chinese demonstrative <em>gāi</em>: A linguistic investigation and its pedagogical implications. Paper presented at <em>The 5th International Forum on Linguistics and Chinese Education (IFOLCE-5)</em>, 4–7 October 2019, New York, United States. <a class="res" href="/me/IFOLCE5 Zhong abstract.pdf" target="_blank">Abstract</a></p>
+                <p class="pub-entry">Hu, Lingjun &amp; Juan Zhong. 2019. Discovering the strategies for written corrective feedback in Chinese language teaching: Insights from 3rd year CIB program. Paper presented at <em>The 2019 Annual Conference of the Chinese Language Teachers Association (CLTA)</em>, 5–7 April 2019, Seattle, United States.</p>
         </section>
 
     </main>
 
+    <a href="#" class="to-top" id="toTop" aria-label="Back to top" title="Back to top">↑</a>
+    <script>
+        (function () {
+            var b = document.getElementById('toTop');
+            function f() { b.classList.toggle('show', window.scrollY > 600); }
+            window.addEventListener('scroll', f, { passive: true }); f();
+            b.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        })();
+    </script>
     <footer>
         <p>© 2026 Juan Zhong</p>
     </footer>
