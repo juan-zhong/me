@@ -7,13 +7,16 @@ Personal academic website of Juan Zhong (钟娟/鍾娟), PhD student in Linguist
 The site includes:
 
 - **Research**: theoretical linguistics, language documentation and resources, and language, identity & access, with publications and presentations
-- **Teaching**: courses taught, and a Teaching & Learning page with teaching materials, guides, and language-learning resources
+- **Teaching**: courses taught as instructor and teaching assistant
 - **Service**: service to linguistics and beyond
 - **Community**: AYHAK, ACTT, and CTHH, community projects I organize
 - **Art**: photography
 - **CV**
 
-Related project: [AYHAK · Anyuan Hakka Documentation Project](https://juan-zhong.github.io/ay_hak/)
+Related sites:
+
+- [AYHAK · Anyuan Hakka Documentation Project](https://juan-zhong.github.io/ay_hak/)
+- [Teaching & Learning](https://juan-zhong.github.io/teaching/): teaching materials and learning resources
 
 Contact: juanzhon AT buffalo DOT edu
 
