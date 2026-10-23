@@ -7,7 +7,6 @@ The site covers my research in morphosyntax, discourse pragmatics, and language 
 Related projects:
 
 - [AYHAK · Anyuan Hakka Documentation Project](https://juan-zhong.github.io/ay_hak/)
-- [Chinese Queer Corpus](https://chinesequeercorpus.github.io/cqc/)
 
 Contact: juanzhon AT buffalo DOT edu
 
