@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Optima, 'Noto Serif SC', 'Noto Serif TC', 'Songti SC', serif;
     background-color: #fdfdfd;
     color: #333;
     line-height: 1.7;
@@ -36,13 +36,13 @@ nav a {
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 0.1em;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Optima, 'Noto Serif SC', 'Noto Serif TC', 'Songti SC', serif;
     text-transform: uppercase;
 }
 
 h1 {
     font-size: 48px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Optima, 'Noto Serif SC', 'Noto Serif TC', 'Songti SC', serif;
     font-weight: 300;
     letter-spacing: 0.1em;
     color: #000;
@@ -60,7 +60,7 @@ h1 {
 
 h2 {
     font-size: 32px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Optima, 'Noto Serif SC', 'Noto Serif TC', 'Songti SC', serif;
     font-weight: 300;
     letter-spacing: 0.1em;
     color: #000;
@@ -70,7 +70,7 @@ h2 {
 
 h3 {
     font-size: 18px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Optima, 'Noto Serif SC', 'Noto Serif TC', 'Songti SC', serif;
     font-weight: 300;
     letter-spacing: 0.1em;
     color: #666;
@@ -81,7 +81,7 @@ p {
     font-size: 18px;
     line-height: 1.8;
     color: #666;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Optima, 'Noto Serif SC', 'Noto Serif TC', 'Songti SC', serif;
     font-weight: 300;
     letter-spacing: 0.03em;
         margin-bottom: 40px;
@@ -149,7 +149,7 @@ footer p {
     font-size: 14px;
     color: #999;
     letter-spacing: 0.1em;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Optima, 'Noto Serif SC', 'Noto Serif TC', 'Songti SC', serif;
     text-transform: uppercase;
 }
 
@@ -163,4 +163,21 @@ footer p {
     letter-spacing: 0.08em;
     line-height: 1.8;
     color: #555;
+}
+
+/* Fonts: IPA and Chinese name (self-hosted subsets, OFL licensed) */
+@font-face {
+    font-family: 'Charis SIL';
+    src: url('fonts/charis-sil-ipa.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LXGW WenKai';
+    src: url('fonts/lxgw-wenkai-name.woff2') format('woff2');
+    font-display: swap;
+}
+
+.ipa {
+    font-family: 'Charis SIL', serif;
 }
