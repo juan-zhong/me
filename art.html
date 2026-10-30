@@ -1,144 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art · Juan Zhong</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .page-nav { text-align: center; padding: 18px 16px 0; line-height: 2.2; }
-        .page-nav a { margin: 0 10px; }
-        html { scroll-behavior: smooth; }
-        .to-top { position: fixed; right: 24px; bottom: 24px; width: 40px; height: 40px; border: 1px solid #ccc; border-radius: 50%; background: #fff; color: #777; font-size: 18px; line-height: 38px; text-align: center; text-decoration: none; opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s, color .2s, border-color .2s; z-index: 100; }
-        .to-top.show { opacity: 1; visibility: visible; }
-        .to-top:hover { color: #000; border-color: #000; }
-    </style>
+  <meta charset="utf-8" />
+  <title>Art · Juan Zhong</title>
+  <link rel="canonical" href="https://juan-zhong.github.io/art/" />
+  <meta http-equiv="refresh" content="0; url=https://juan-zhong.github.io/art/" />
+  <meta name="robots" content="noindex" />
+  <script>location.replace('https://juan-zhong.github.io/art/' + (location.hash || ''));</script>
+  <style>body{font-family:Optima,'Kaiti SC','STKaiti',serif;color:#555;text-align:center;padding:80px 20px;letter-spacing:.05em}a{color:#000}</style>
 </head>
 <body>
-
-    <nav class="page-nav">
-        <a href="index.html">← Juan Zhong</a>
-        <a href="#photography">Photography</a>
-        <a href="#painting">Painting</a>
-        <a href="#calligraphy">Calligraphy</a>
-    </nav>
-   
-    <header>
-        <h1>Art</h1>
-    </header>  
-   
-    <main>
-
-        <section id="photography" class="content-section">
-            <h2>Photography</h2>
-        </section>
-
-        <section class="content-section">     
-            <div class="gallery">          
-                <img src="theMET.JPG" alt="The Met, New York" loading="lazy">
-            </div>
-        </section>
-        
-        <section class="content-section">   
-            <div class="gallery">
-                <img src="seattle.JPG" alt="Seattle" loading="lazy">   
-                <img src="moonriver.JPG" alt="Photograph" loading="lazy">    
-            </div>       
-
-        </section>
-                <section class="content-section">   
-            <div class="gallery">
-                <img src="sea.jpg" alt="The sea" loading="lazy"> 
-                <img src="buf-20241006.jpg" alt="Buffalo, October 2024" loading="lazy">  
-            </div>       
-        </section>
-
-                <section class="content-section">
-            <div class="gallery">
-                <img src="tulip.jpg" alt="Tulips" loading="lazy">
-                <img src="rainbow.JPG" alt="Rainbow" loading="lazy">
-            </div>
-        </section>
-
-        <section class="content-section">       
-            <div class="gallery">
-                <img src="kent423.JPG" alt="Photograph" loading="lazy">          
-                <img src="yellowred.jpg" alt="Photograph" loading="lazy">           
-            </div>
-        </section>
-        
-        <section class="content-section">       
-            <div class="gallery">       
-                <img src="buf-20241213.jpg" alt="Buffalo, December 2024" loading="lazy">             
-                <img src="dr-20250816.jpg" alt="Photograph, August 2025" loading="lazy"> 
-            </div>
-        </section>
-        
-        <section class="content-section">       
-            <div class="gallery">       
-                <img src="light.JPG" alt="Photograph" loading="lazy">             
-                <img src="met shades.JPG" alt="Shades at The Met, New York" loading="lazy"> 
-            </div>
-        </section>
-
-        <section class="content-section">   
-            <div class="gallery">
-                <img src="a man and a dog-nyc-20250620.jpeg" alt="A man and a dog, New York, June 2025" loading="lazy">
-                <img src="a man and a dog-nyc-20221124.jpg" alt="A man and a dog, New York, November 2022" loading="lazy">
-            </div>       
-        </section>
-               
-        <section class="content-section">            
-            <div class="gallery">
-                 <img src="men.jpg" alt="Photograph" loading="lazy"> 
-            </div>       
-        </section>
-    
-        <section class="content-section">   
-            <div class="gallery">
-                <img src="motion.jpg" alt="Photograph" loading="lazy">   
-                <img src="dr-20250811.jpg" alt="Photograph, August 2025" loading="lazy"> 
-            </div>       
-        </section>
-        
-        <section class="content-section">        
-            <div class="gallery">
-                 <img src="sf-20250705.jpg" alt="San Francisco, July 2025" loading="lazy"> 
-                <img src="sf-walking-0250705.jpg" alt="Walking, San Francisco, July 2025" loading="lazy"> 
-            </div>       
-        </section>
-      
-        <section class="content-section">        
-            <div class="gallery">
-                 <img src="nyc-20210828.JPG" alt="New York, August 2021" loading="lazy"> 
-                <img src="nyc-20230802.jpg" alt="New York, August 2023" loading="lazy"> 
-            </div>       
-        </section>
-           
-    
-        <section id="painting" class="content-section">
-            <h2>Painting</h2>
-            <p> Coming soon.</p>
-        </section>
-
-        <section id="calligraphy" class="content-section">
-            <h2>Calligraphy</h2>
-            <p> Coming soon.</p>
-        </section>
-
-    </main>
-
-    <a href="#" class="to-top" id="toTop" aria-label="Back to top" title="Back to top">↑</a>
-    <script>
-        (function () {
-            var b = document.getElementById('toTop');
-            function f() { b.classList.toggle('show', window.scrollY > 600); }
-            window.addEventListener('scroll', f, { passive: true }); f();
-            b.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-        })();
-    </script>
-    <footer>
-        <p>© 2026 Juan Zhong</p>
-    </footer>
+  <p>This page has moved to <a href="https://juan-zhong.github.io/art/">https://juan-zhong.github.io/art/</a></p>
 </body>
 </html>
