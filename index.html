@@ -19,6 +19,12 @@
         #service h4 .sub { display: block; font-size: 15px; font-weight: 300; color: #777; letter-spacing: 0.05em; margin-top: 2px; }
         /* Publication entries: darker grey for readable contrast (WCAG AA) */
         p.pub-entry { color: #6f6f6f !important; }
+        /* Research: each project's description sits close to its own entries; projects are set further apart */
+        #research h4 { margin-top: 32px; }
+        #research h4 + p { margin-bottom: 16px; }
+        #research h3 + h4 { margin-top: 20px; }
+        /* Section category headings (01 Theoretical Linguistics, Instructor, Professional…) read above the project headings */
+        main h3 { color: #111; font-weight: 400; }
         /* Phones: the nav wraps evenly and stays centred */
         @media (max-width: 600px) {
             nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; max-width: 340px; margin-left: auto; margin-right: auto; }
