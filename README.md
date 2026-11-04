@@ -11,7 +11,7 @@ The site includes:
 
 Related sites:
 
-- [AYHAK · Anyuan Hakka Documentation Project](https://juan-zhong.github.io/ay_hak/)
+- [AYHAK · Anyuan Hakka Documentation Project](https://juan-zhong.github.io/ayhak/)
 - [Teach to Learn](https://juan-zhong.github.io/teachtolearn/): teaching materials and learning resources
 - [Art](https://juan-zhong.github.io/art/): photography, calligraphy, painting, and glasswork
 
