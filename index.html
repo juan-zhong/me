@@ -14,9 +14,10 @@
         .pub-entry a.res { white-space: nowrap; }
         .note { font-size: 15px; color: #777; }
         #research h3 ~ h3, #service h3 ~ h3 { margin-top: 72px; }
-        #service p.proj { font-size: 16px; margin-bottom: 12px; }
+        #community p.proj { font-size: 16px; margin-bottom: 12px; }
         #community p.pub-entry > a:first-child { margin-left: 0; }
-        #service h4 .sub { display: block; font-size: 15px; font-weight: 300; color: #777; letter-spacing: 0.05em; margin-top: 2px; }
+        #service p.pub-entry a { font-size: inherit; margin-left: 0; }
+        #community h4 .sub { display: block; font-size: 15px; font-weight: 300; color: #777; letter-spacing: 0.05em; margin-top: 2px; }
         /* Publication entries: darker grey for readable contrast (WCAG AA) */
         p.pub-entry { color: #6f6f6f !important; }
         /* Research: each project's description sits close to its own entries; projects are set further apart */
@@ -40,6 +41,7 @@
 <li><a href="#research">Research</a></li>
 <li><a href="#teaching">Teaching</a></li>
 <li><a href="#service">Service</a></li>
+<li><a href="#community">Community</a></li>
 <li><a href="https://juan-zhong.github.io/writing/">Writing</a></li>
 <li><a href="https://juan-zhong.github.io/art/">Art</a></li>
 <li><a href="#about">About</a></li>
@@ -82,7 +84,7 @@
             <h3>02 Language Documentation &amp; Resources</h3>
 
             <h4>Hakka</h4>
-            <p> Anyuan Hakka is my native language. Since 2021, I have led <a href="https://juan-zhong.github.io/ayhak/">AYHAK</a>, a community-based project to document, analyze, and revitalize it.</p>
+            <p> Anyuan Hakka is my native language. Since 2021, I have led <a href="#ayhak">AYHAK</a>, a community-based project to document, analyze, and revitalize it.</p>
                            <p class="pub-entry">Zhong, Juan. 2027. Photographing plants, documenting language: An ethnobotanical photo book as a documentation method for Anyuan Hakka. Paper to be presented at <em>The 10th International Conference on Language Documentation and Conservation (ICLDC)</em>, 4–7 March 2027, Honolulu, United States.</p>
             <p class="pub-entry">Zhong, Juan. 2026. Anyuan Hakka documentation project. Paper presented at <em>4to Coloquio Internacional de Lingüística en Bolivia</em>, 20–21 March 2026, La Paz, Bolivia. [Presented in Anyuan Hakka] <a class="res" href="/me/CILB4 Zhong abstract.pdf" target="_blank">Abstract</a></p>
 
@@ -119,22 +121,27 @@
 
         <section id="teaching" class="content-section">
             <h2>Teaching</h2>
-            <h3>Instructor</h3>
+            <p class="lead">I have taught introductory linguistics courses at the University at Buffalo, Chinese language courses at Columbia University and Beijing Foreign Studies University, and English language courses to children of migrant workers in Beijing.</p>
+            <p class="lead">See <a href="https://juan-zhong.github.io/teachtolearn/">Teach to Learn</a>, where I share teaching notes, language-learning resources, and community-based materials for learners new to linguistics and teachers looking for materials to adapt.</p>
+            <h3 style="margin-top:48px;">Linguistics</h3>
                 <p class="pub-entry">Instructor of record, Language, Society, and the Individual (2026 Fall &amp; 2025 Spring), Department of Linguistics, University at Buffalo, SUNY.</p>
                 <p class="pub-entry">Instructor of record, Introduction to Linguistic Analysis (2024 Fall), Department of Linguistics, University at Buffalo, SUNY.</p>
                 <p class="pub-entry">Guest lecturer, Languages in East Asia (October 15), for Languages of the World instructed by Dr. Gladys Camacho-Rios (2025 Fall), Department of Linguistics, University at Buffalo, SUNY.</p>
-                <p class="pub-entry">Adjunct Lecturer, First Year Chinese II (2022 Spring) and Third Year Chinese N (2021 Fall), Department of East Asian Languages and Cultures, Columbia University.</p>
-                <p class="pub-entry">Lecturer, Elementary Mandarin Chinese for English speakers (2018), School of International Education, Beijing Foreign Studies University.</p>
+                <p class="pub-entry">Teaching assistant, Language, Society, and the Individual instructed by Brian Hayden (2024 Spring), Department of Linguistics, University at Buffalo, SUNY.</p>
+                <p class="pub-entry">Teaching assistant, Introduction to Linguistic Analysis instructed by Dr. EunHee Lee (2023 Fall), Department of Linguistics, University at Buffalo, SUNY.</p>
 
-            <h3 style="margin-top:48px;">Teaching Assistant</h3>
-                <p class="pub-entry">Language, Society, and the Individual instructed by Brian Hayden (2024 Spring), Department of Linguistics, University at Buffalo, SUNY.</p>
-                <p class="pub-entry">Introduction to Linguistic Analysis instructed by Dr. EunHee Lee (2023 Fall), Department of Linguistics, University at Buffalo, SUNY.</p>
-                <p class="pub-entry">First Year Chinese N I–II, Third Year Chinese N I–II, Fourth Year Chinese Adv I, Fifth Year Chinese I, Intermediate Chinese I–II, Advanced Chinese I–II, Business Chinese I–II, and Advanced Business Chinese (2017–2021), Department of East Asian Languages and Cultures, Columbia University.</p>
-            <p class="note" style="margin-top:32px;">Teaching materials and learning resources: <a href="https://juan-zhong.github.io/teachtolearn/">Teach to Learn</a>.</p>
+            <h3 style="margin-top:48px;">Language Courses</h3>
+                <p class="pub-entry">Adjunct Lecturer, First Year Chinese II (2022 Spring) and Third Year Chinese N (2021 Fall), Department of East Asian Languages and Cultures, Columbia University.</p>
+                <p class="pub-entry">Chinese Instructor, Summer Chinese Language Program (2017 Summer), Department of East Asian Languages and Cultures, Columbia University, Beijing.</p>
+                <p class="pub-entry">Lecturer, Elementary Mandarin Chinese for English speakers (2018), School of International Education, Beijing Foreign Studies University.</p>
+                <p class="pub-entry">Chinese Instructor Intern, China–Malaysia Chinese Teacher Education Program (2017 Fall), School of Chinese Language and Literature, Beijing Foreign Studies University.</p>
+                <p class="pub-entry">English Teacher, After School Program and Summer Program for children of migrant workers (2016–2018), Vibrant Communities, Beijing.</p>
+                <p class="pub-entry">Teaching assistant, First Year Chinese N I–II, Third Year Chinese N I–II, Fourth Year Chinese Adv I, Fifth Year Chinese I, Intermediate Chinese I–II, Advanced Chinese I–II, Business Chinese I–II, and Advanced Business Chinese (2017–2021), Department of East Asian Languages and Cultures, Columbia University.</p>
         </section>
 
         <section id="service" class="content-section">
             <h2>Service</h2>
+            <p class="lead">I have served professional organizations in linguistics and the language programs and student communities where I have studied and taught.</p>
                 <p class="pub-entry">Co-Student Officer, <a href="https://www.lsadc.org/AF_MemberCommittee.asp?committeeid=9" target="_blank">Committee on Indigenous Languages and their Sustainability (COILS)</a>, Linguistic Society of America (2026–).</p>
                 <p class="pub-entry">Board of Directors Member, Graduate Linguistic Association, University at Buffalo, SUNY (2022–2023).</p>
                 <p class="pub-entry">Meeting Volunteer, LSA Annual Meeting, Linguistic Society of America (2019–2022).</p>
@@ -149,17 +156,19 @@
             <h2>Community</h2>
 
             <h4 id="ayhak">AYHAK<span class="sub">Anyuan Hakka Documentation Project</span></h4>
-
-            <h4 id="ayhak">AYHAK<span class="sub">Anyuan Hakka Documentation Project</span></h4>
-            <p class="proj">A community project for Anyuan Hakka, my hometown language (since 2021): an online dictionary and 500 Everyday Sentences with recordings, biweekly online meetups, a plant photo book (in progress), introductory linguistics courses taught in Anyuan Hakka (2024), and Speaking Anyuan Hakka, a Hakka language course taught in Mandarin (coming soon).</p>
+            <p class="proj">A community project for Anyuan Hakka, my hometown language (since 2021): an online dictionary and 500 Everyday Sentences with recordings, online meetups every two weeks, a plant photo book (in progress), introductory linguistics courses taught in Anyuan Hakka (2024), and Speaking Anyuan Hakka, a Hakka language course taught in Mandarin (coming soon).</p>
             <p class="pub-entry"><a href="https://juan-zhong.github.io/ayhak/">AYHAK website</a></p>
 
             <h4 id="actt">ACTT<span class="sub">An inclusive multilingual project</span></h4>
-            <p class="proj">Arsuña CeTee Todos (ACTT) is a grassroots, speaker-led language exchange. Its name joins Aymara <em>arsuña</em> ‘to speak’, Anyuan Hakka <em>CeTee</em> ‘casual chat’, and Spanish <em>todos</em> ‘everyone’. In biweekly meetings, speakers take turns leading the conversation, with community languages alongside global ones.</p>
+            <p class="proj">Arsuña CeTee Todos (ACTT) is a grassroots, speaker-led language exchange. Its name joins Aymara <em>arsuña</em> ‘to speak’, Anyuan Hakka <em>CeTee</em> ‘casual chat’, and Spanish <em>todos</em> ‘everyone’. In meetings held every two weeks, speakers take turns leading the conversation, with community languages alongside global ones.</p>
+            <p class="proj">ACTT is distinguished by its commitment to centering minoritized and community-based languages alongside global ones, and by its speaker-led, rotating format, in which linguistic authority is shared and reconfigured across sessions. Rather than adopting a classroom model, ACTT prioritizes interaction, everyday language use, and relational exchange, fostering a micro-community grounded in participation rather than instruction.</p>
             <p class="pub-entry"><a href="webcal://p54-caldav.icloud.com/published/2/MTEzODIwMDE0NDExMzgyMMFgVCDCDaKoMtNCKBn1Ehc48QpYrsbi4d9_Pth8d7qwrXp8MizCJNSiF5maVsD654QfriYYcPomsjoU0DsUmHo" target="_blank">ACTT 2026 calendar</a></p>
 
             <h4 id="cthh">CTHH<span class="sub">A community program for young people from under-resourced counties in China</span></h4>
-            <p class="proj">A peer-support network I co-founded with peers from Anyuan in 2020. It runs Mentoring for Growth (CTHH), one-on-one online mentoring held each summer and winter break, and the Drop-in Chat Room (OHOH), held weekly during the fall semester. As of 2026: 13 rounds of CTHH, four rounds of OHOH, and three annual gatherings.</p>
+            <p class="proj">A peer-support network I co-founded with peers from Anyuan in 2020. It runs Mentoring for Growth (CTHH), one-on-one online mentoring held each summer and winter break, and the Drop-in Chat Room (OHOH), held weekly during the fall semester.</p>
+            <p class="proj">In CTHH, people voluntarily sign up as mentors or mentees and are matched in pairs based on shared backgrounds and interests. Each pair engages in a 60–90 minute online conversation, during which mentors share personal stories and advice, while mentees bring questions about study, work, or life.</p>
+            <p class="proj">In OHOH, members from the CTHH plan freely join in the weekly online chatting room hosted by regular mentors and have conversations about their questions and interests in an informal, supportive environment.</p>
+            <p class="proj">As of 2026: 13 rounds of CTHH, four rounds of OHOH, and three gatherings.</p>
             <p class="pub-entry">WeChat official account: SpringFlowerField</p>
         </section>
 
